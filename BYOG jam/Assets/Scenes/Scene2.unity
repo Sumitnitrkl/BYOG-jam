@@ -3224,6 +3224,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33aa3234397faa044af73f4700427d62, type: 3}
+<<<<<<< HEAD
 --- !u!1 &1719318337
 GameObject:
   m_ObjectHideFlags: 0
@@ -3300,6 +3301,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1719318337}
   m_CullTransparentMesh: 1
+=======
+>>>>>>> parent of 6fd3ef5 (newscenes)
 --- !u!1001 &1797219361
 PrefabInstance:
   m_ObjectHideFlags: 0
