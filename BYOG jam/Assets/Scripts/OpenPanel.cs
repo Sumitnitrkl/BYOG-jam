@@ -6,6 +6,7 @@ public class OpenPanel : MonoBehaviour
 {
 
     public GameObject panelToOpen;
+    public FirstPersonController myScript;
 
     private bool isGamePaused = false;
 
@@ -17,6 +18,7 @@ public class OpenPanel : MonoBehaviour
             {
                 // Enable the panel
                 panelToOpen.SetActive(true);
+                
                 PauseGame();
             }
         }
@@ -26,6 +28,8 @@ public class OpenPanel : MonoBehaviour
     {
         isGamePaused = true;
         Time.timeScale = 0f; // Pause the game
+        myScript.playerCanMove = false;
+        myScript.cameraCanMove = false;
     }
 
     public void ResumeGame()
@@ -33,6 +37,8 @@ public class OpenPanel : MonoBehaviour
         isGamePaused = false;
         Time.timeScale = 1f; // Resume the game
         panelToOpen.SetActive(false); // Disable the panel
+        myScript.playerCanMove = true;
+        myScript.cameraCanMove = true;
     }
 
     // Start is called before the first frame update
